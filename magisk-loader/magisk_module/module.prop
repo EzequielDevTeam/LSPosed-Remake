@@ -1,7 +1,7 @@
-id=${moduleId}
-name=${api} - LSPosed
-version=${versionName} (${versionCode})
-versionCode=${versionCode}
-author=EzequielDevTeam & LSPosed Contributors
-description=Remake of LSPosed Framework with Material 3 UI. Supports Android 8.1 ~ 16 (Baklava). Maintained by EzequielDevTeam. ${requirement}.
-updateJson=${updateJson}
+id=zygisk_lsposed
+name=Zygisk - LSPosed
+version=v1.9.2 (7024)
+versionCode=7024
+author=LSPosed Developers
+description=Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 14. Requires Magisk 24.0+ and Zygisk enabled.
+updateJson=https://lsposed.github.io/LSPosed/release/zygisk.json
