@@ -37,7 +37,7 @@ require_new_android() {
   ui_print "*********************************************************"
   ui_print "! Unsupported Android version ${1} (below Oreo MR1)"
   ui_print "! Learn more from our GitHub"
-  [ "$BOOTMODE" == "true" ] && am start -a android.intent.action.VIEW -d https://github.com/EzequielDevTeam/LSPosed-Remake#supported-versions
+  [ "$BOOTMODE" == "true" ] && am start -a android.intent.action.VIEW -d https://github.com/EzequielDevTeam/LSPosed-ET#supported-versions
   abort    "*********************************************************"
 }
 

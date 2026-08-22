@@ -4,8 +4,8 @@
 
 **An ART-level hook framework providing a complete Xposed implementation for modern Android**
 
-[![Release](https://img.shields.io/github/v/release/EzequielDevTeam/LSPosed-Remake?style=for-the-badge&logo=git&label=Release)](https://github.com/EzequielDevTeam/LSPosed-Remake/releases)
-[![CI](https://img.shields.io/github/actions/workflow/status/EzequielDevTeam/LSPosed-Remake/core.yml?branch=master&style=for-the-badge&label=Build)](https://github.com/EzequielDevTeam/LSPosed-Remake/actions/workflows/core.yml)
+[![Release](https://img.shields.io/github/v/release/EzequielDevTeam/LSPosed-ET?style=for-the-badge&logo=git&label=Release)](https://github.com/EzequielDevTeam/LSPosed-ET/releases)
+[![CI](https://img.shields.io/github/actions/workflow/status/EzequielDevTeam/LSPosed-ET/core.yml?branch=master&style=for-the-badge&label=Build)](https://github.com/EzequielDevTeam/LSPosed-ET/actions/workflows/core.yml)
 [![Xposed API](https://img.shields.io/badge/Xposed_API-100-blue?style=for-the-badge)](https://github.com/libxposed/api)
 [![Min Android](https://img.shields.io/badge/Android_8.1+-27+-34A853?style=for-the-badge&logo=android&logoColor=white)](#supported-versions)
 [![Target Android](https://img.shields.io/badge/Android_16_(API_36)-Supported-brightgreen?style=for-the-badge&logo=android&logoColor=white)](#supported-versions)
@@ -74,7 +74,7 @@ Hooking itself is delegated to **[LSPlant](https://github.com/LSPosed/LSPlant)**
 ## Installation
 
 1. Ensure **Magisk 24.0+** is installed with **Zygisk enabled**
-2. Flash the appropriate zip from the [Releases](https://github.com/EzequielDevTeam/LSPosed-Remake/releases) page:
+2. Flash the appropriate zip from the [Releases](https://github.com/EzequielDevTeam/LSPosed-ET/releases) page:
    - `LSPosed-*-zygisk-release.zip` for Magisk with Zygisk (recommended)
    - `LSPosed-*-riru-release.zip` for setups still using Riru
 3. Reboot
