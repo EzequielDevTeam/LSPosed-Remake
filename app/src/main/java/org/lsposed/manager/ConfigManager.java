@@ -75,7 +75,7 @@ public class ConfigManager {
     public static List<PackageInfo> getInstalledPackagesFromAllUsers(int flags, boolean filterNoProcess) {
         List<PackageInfo> list = new ArrayList<>();
         try {
-            list.addAll(LSPManagerServiceHolder.getService().getInstalledPackagesFromAllUsers(flags, filterNoProcess));
+            list.addAll(LSPManagerServiceHolder.getService().getInstalledPackagesFromAllUsers(flags, filterNoProcess).getList());
         } catch (RemoteException e) {
             Log.e(App.TAG, Log.getStackTraceString(e));
         }
@@ -300,7 +300,7 @@ public class ConfigManager {
     public static List<ResolveInfo> queryIntentActivitiesAsUser(Intent intent, int flags, int userId) {
         List<ResolveInfo> list = new ArrayList<>();
         try {
-            list.addAll(LSPManagerServiceHolder.getService().queryIntentActivitiesAsUser(intent, flags, userId));
+            list.addAll(LSPManagerServiceHolder.getService().queryIntentActivitiesAsUser(intent, flags, userId).getList());
         } catch (RemoteException e) {
             Log.e(App.TAG, Log.getStackTraceString(e));
         }
