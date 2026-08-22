@@ -33,6 +33,7 @@ jobs:
         run: |
           git config --global --add safe.directory '*'
           git submodule update --init --depth 1
+          git -C external/lsplant submodule update --init --depth 1 lsplant/src/main/jni/external/dex_builder
 
       - name: Write key
         if: ${{ ( github.event_name != 'pull_request' && github.ref == 'refs/heads/master' ) || github.ref_type == 'tag' }}
