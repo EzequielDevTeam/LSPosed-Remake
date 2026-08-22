@@ -26,8 +26,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: "recursive"
+          submodules: false
           fetch-depth: 0
+
+      - name: Init top-level submodules
+        run: |
+          git config --global --add safe.directory '*'
+          git submodule update --init --depth 1
 
       - name: Write key
         if: ${{ ( github.event_name != 'pull_request' && github.ref == 'refs/heads/master' ) || github.ref_type == 'tag' }}
