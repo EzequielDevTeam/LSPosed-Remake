@@ -213,6 +213,26 @@ public class LSPosedContext implements XposedInterface {
         return doDeoptimize(constructor);
     }
 
+    @Override
+    public HookBuilder hook(@NonNull Executable origin) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean deoptimize(@NonNull Executable method) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public <T> void invokeOrigin(@NonNull Constructor<T> constructor, @Nullable T receiver, Object[] args) throws InvocationTargetException, IllegalArgumentException, IllegalAccessException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public <T> void invokeSpecial(@NonNull Constructor<T> constructor, @NonNull T receiver, Object[] args) throws InvocationTargetException, IllegalArgumentException, IllegalAccessException {
+        throw new UnsupportedOperationException();
+    }
+
     @Nullable
     @Override
     public Object invokeOrigin(@NonNull Method method, @Nullable Object thisObject, Object[] args) throws InvocationTargetException, IllegalArgumentException, IllegalAccessException {
