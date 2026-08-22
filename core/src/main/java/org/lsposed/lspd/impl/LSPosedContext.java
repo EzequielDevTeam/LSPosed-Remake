@@ -64,6 +64,12 @@ public class LSPosedContext implements XposedInterface {
         this.service = service;
     }
 
+    @NonNull
+    @Override
+    public ApplicationInfo getModuleApplicationInfo() {
+        return mApplicationInfo;
+    }
+
     public static void callOnPackageLoaded(XposedModuleInterface.PackageLoadedParam param) {
         for (XposedModule module : modules) {
             try {
