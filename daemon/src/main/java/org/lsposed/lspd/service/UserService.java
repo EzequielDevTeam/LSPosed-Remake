@@ -72,7 +72,11 @@ public class UserService {
         List<UserInfo> users = new LinkedList<>();
         if (um == null) return users;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            users = um.getUsers(true, true, true);
+            try {
+                users = um.getUsers(true, true, true);
+            } catch (NoSuchMethodError e) {
+                users = reflectGetUsers(um);
+            }
         } else {
             try {
                 users = um.getUsers(true);
@@ -94,6 +98,26 @@ public class UserService {
             }
         }
         return users;
+    }
+
+    @SuppressWarnings("unchecked")
+    private static List<UserInfo> reflectGetUsers(IUserManager um) {
+        int[] candidates = {4, 3, 1};
+        for (int paramCount : candidates) {
+            try {
+                var types = new Class<?>[paramCount];
+                java.util.Arrays.fill(types, boolean.class);
+                var m = IUserManager.class.getMethod("getUsers", types);
+                var args = new Object[paramCount];
+                java.util.Arrays.fill(args, Boolean.TRUE);
+                if (paramCount == 4) args[3] = Boolean.FALSE;
+                return (List<UserInfo>) m.invoke(um, args);
+            } catch (NoSuchMethodException ignored) {
+            } catch (Exception e) {
+                Log.e(TAG, Log.getStackTraceString(e));
+            }
+        }
+        return new LinkedList<>();
     }
 
     public static UserInfo getUserInfo(int userId) throws RemoteException {
