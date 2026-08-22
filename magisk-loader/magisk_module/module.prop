@@ -1,7 +1,7 @@
 id=zygisk_lsposed
-name=Zygisk - LSPosed
-version=v1.9.2 (7024)
-versionCode=7024
-author=LSPosed Developers
-description=Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 14. Requires Magisk 24.0+ and Zygisk enabled.
-updateJson=https://lsposed.github.io/LSPosed/release/zygisk.json
+name=LSPosed ET
+version=v${versionName} (${versionCode})
+versionCode=${versionCode}
+author=${authorList}
+description=Fork do LSPosed mantido pela EzequielDevTeam Technology. Implementacao melhorada do Xposed com suporte ao Android 16. Requer Magisk 24.0+ e Zygisk ativado.
+updateJson=${updateJson}

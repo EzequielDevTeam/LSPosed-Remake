@@ -28,9 +28,9 @@ plugins {
     alias(libs.plugins.lsplugin.resopt)
 }
 
-val moduleName = "LSPosed"
+val moduleName = "LSPosed-ET"
 val moduleBaseId = "lsposed"
-val authors = "LSPosed Developers"
+val authors = "EzequielDevTeam Technology"
 
 val riruModuleId = "lsposed"
 val moduleMinRiruApiVersion = 26
@@ -159,7 +159,7 @@ fun afterEval() = android.applicationVariants.forEach { variant ->
                 "versionName" to "v$verName",
                 "versionCode" to verCode,
                 "authorList" to authors,
-                "updateJson" to "https://lsposed.github.io/LSPosed/release/${flavorLowered}.json",
+                "updateJson" to "https://raw.githubusercontent.com/EzequielDevTeam/LSPosed-Remake/master/update.json",
                 "requirement" to when (flavorLowered) {
                     "riru" -> "Requires Riru $moduleMinRiruVersionName or above installed"
                     "zygisk" -> "Requires Magisk 24.0+ and Zygisk enabled"
